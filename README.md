@@ -220,21 +220,13 @@ Unlike horizon evaluation, rollout testing feeds the model's own predictions bac
 
 ```
 Download dataset
-
 ↓
-
 Build latent transition dataset
-
 ↓
-
 Train latent GRU
-
 ↓
-
 Evaluate prediction horizons
-
 ↓
-
 Evaluate full rollout
 ```
 
@@ -246,29 +238,17 @@ The world model consists of
 
 ```
 State + Action Sequence
-
 ↓
-
 Encoder
-
 ↓
-
 Latent Representation
-
 ↓
-
 GRU Dynamics Model
-
 ↓
-
 Predicted Future Latent
-
 ↓
-
 Decoder
-
 ↓
-
 Next Robot State
 ```
 
