@@ -1,16 +1,18 @@
-# Data
+# Large files
 dataset/
 
-# Model checkpoints
-models/
-
-# Logs
-logs/
-*.out
-
-# Results
+# Experiment outputs
+wandb/
 results/
 
 # Python
 __pycache__/
 *.pyc
+
+# Checkpoints
+models/*.pt
+models/*.pth
+models/*.ckpt
+
+# Keep config files
+!models/.gitkeep
