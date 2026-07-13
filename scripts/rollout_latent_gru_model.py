@@ -3,13 +3,26 @@ import numpy as np
 import torch
 import torch.nn as nn
 import matplotlib.pyplot as plt
+import wandb
+
+import yaml
 
 # Configuration
-SEQ_LEN = 20
-STATE_DIM = 77
-ACTION_DIM = 7
-LATENT_DIM = 32
-GRU_HIDDEN_DIM = 128
+
+with open("configs/train_config.yaml", "r") as f:
+    config = yaml.safe_load(f)
+
+wandb.init(
+    project="latent-gru-world-model",
+    name="latent-gru-rollout-evaluation",
+    config=config
+)
+
+SEQ_LEN = config["model"]["seq_len"]
+STATE_DIM = config["model"]["state_dim"]
+ACTION_DIM = config["model"]["action_dim"]
+LATENT_DIM = config["model"]["latent_dim"]
+GRU_HIDDEN_DIM = config["model"]["gru_hidden_dim"]
 
 EPISODE_DIR = "dataset/episode_001"
 
@@ -64,7 +77,8 @@ model = LatentGRUWorldModel()
 model.load_state_dict(
     torch.load(
         "models/latent_gru_world_model.pt",
-        map_location="cpu"
+        map_location="cpu",
+        weights_only=True
     )
 )
 
@@ -132,6 +146,11 @@ states = np.concatenate(
 
 print("State shape:", states.shape)
 
+wandb.config.update({
+    "episode": EPISODE_DIR,
+    "timesteps": len(states)
+})
+
 # Initialize with a real 20-step history
 sequence = []
 for k in range(SEQ_LEN):
@@ -170,6 +189,11 @@ eef_rmse = np.sqrt(np.mean((predicted_states[:, 14:17] - true_states[:, 14:17]) 
 print(f"Full rollout RMSE = {rollout_rmse:.6f}")
 print(f"EEF rollout RMSE = {eef_rmse:.6f}")
 
+wandb.log({
+    "rollout_rmse": rollout_rmse,
+    "eef_rollout_rmse": eef_rmse
+})
+
 # Error growth
 error_per_step = np.linalg.norm(predicted_states - true_states, axis=1)
 
@@ -178,10 +202,17 @@ threshold = 0.10
 diverged = np.where(error_per_step > threshold)[0]
 
 if len(diverged) > 0:
-    print("Divergence timestep:", diverged[0])
+    divergence_step = int(diverged[0])
+    print("Divergence timestep:", divergence_step)
 
 else:
+    divergence_step = -1
     print("No divergence within episode")
+
+wandb.log({
+    "divergence_timestep": divergence_step
+})
+
 
 # Plots
 plt.figure(figsize=(10, 5))
@@ -266,3 +297,5 @@ plt.legend()
 plt.grid()
 
 plt.show()
+
+wandb.finish()

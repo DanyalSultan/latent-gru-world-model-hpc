@@ -1,0 +1,65 @@
+_wandb:
+    value:
+        cli_version: 0.23.0
+        e:
+            v88v87p0riqn97078ke3iah7dwx1560g:
+                codePath: scripts/evaluate_latent_gru_horizons.py
+                codePathLocal: scripts/evaluate_latent_gru_horizons.py
+                cpu_count: 64
+                cpu_count_logical: 64
+                disk:
+                    /:
+                        total: "16776032256"
+                        used: "10587934720"
+                email: 92danyalsultan@gmail.com
+                executable: /users/aca22mds/.conda/envs/latentgru/bin/python
+                git:
+                    commit: 6ca7089344259fc2b6746b7d9d6dc52094d27ef0
+                    remote: https://github.com/zaryanaliansari9/Latent-GRU-World-Model.git
+                host: login2.pri.stanage.alces.network
+                memory:
+                    total: "1081432526848"
+                os: Linux-3.10.0-1160.149.1.el7.x86_64-x86_64-with-glibc2.17
+                program: /mnt/parscratch/users/aca22mds/projects/latent-gru-world-model/Latent-GRU-World-Model/scripts/evaluate_latent_gru_horizons.py
+                python: CPython 3.10.18
+                root: /mnt/parscratch/users/aca22mds/projects/latent-gru-world-model/Latent-GRU-World-Model
+                startedAt: "2026-07-13T22:22:48.117473Z"
+                writerId: v88v87p0riqn97078ke3iah7dwx1560g
+        m: []
+        python_version: 3.10.18
+        t:
+            "1":
+                - 1
+            "2":
+                - 1
+            "3":
+                - 2
+                - 13
+                - 16
+            "4": 3.10.18
+            "5": 0.23.0
+            "12": 0.23.0
+            "13": linux-x86_64
+episode:
+    value: dataset/episode_001
+experiment:
+    value:
+        name: latentgru_200epochs
+loss:
+    value:
+        dynamics_weight: 1
+        recon_weight: 1
+model:
+    value:
+        action_dim: 7
+        gru_hidden_dim: 128
+        latent_dim: 32
+        seq_len: 20
+        state_dim: 77
+timesteps:
+    value: 1000
+training:
+    value:
+        batch_size: 128
+        epochs: 200
+        learning_rate: 0.001

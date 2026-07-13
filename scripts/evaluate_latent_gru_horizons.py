@@ -2,15 +2,30 @@ import os
 import numpy as np
 import torch
 import torch.nn as nn
+import pandas as pd
+import matplotlib.pyplot as plt
+import wandb
+
 
 # Configuration
-SEQ_LEN = 20
-STATE_DIM = 77
-ACTION_DIM = 7
-LATENT_DIM = 32
-GRU_HIDDEN_DIM = 128
+import yaml
+
+with open("configs/train_config.yaml", "r") as f:
+    config = yaml.safe_load(f)
+
+SEQ_LEN = config["model"]["seq_len"]
+STATE_DIM = config["model"]["state_dim"]
+ACTION_DIM = config["model"]["action_dim"]
+LATENT_DIM = config["model"]["latent_dim"]
+GRU_HIDDEN_DIM = config["model"]["gru_hidden_dim"]
 
 EPISODE_DIR = "dataset/episode_001"
+
+wandb.init(
+    project="latent-gru-world-model",
+    name="latent-gru-horizon-evaluation",
+    config=config
+)
 
 # Model definition
 class LatentGRUWorldModel(nn.Module):
@@ -66,7 +81,8 @@ model = LatentGRUWorldModel()
 model.load_state_dict(
     torch.load(
         "models/latent_gru_world_model.pt",
-        map_location="cpu"
+        map_location="cpu",
+        weights_only=True
     )
 )
 
@@ -134,6 +150,11 @@ states = np.concatenate(
 
 print("State shape:", states.shape)
 
+wandb.config.update({
+    "episode": EPISODE_DIR,
+    "timesteps": len(states)
+})
+
 # Predict one normalized next state from a sequence
 def predict_next_state(sequence_raw):
     sequence_norm = (sequence_raw - X_mean) / X_std
@@ -147,6 +168,9 @@ def predict_next_state(sequence_raw):
     return next_state
 
 # Horizon evaluation
+
+results = []
+
 horizons = [1, 5, 10, 20, 50, 100]
 for horizon in horizons:
     errors = []
@@ -172,7 +196,61 @@ for horizon in horizons:
         rmse = np.sqrt(np.mean((current_state - true_state) ** 2))
         errors.append(rmse)
 
+    mean_rmse = np.mean(errors)
+
     print(
         f"{horizon:3d}-step RMSE = "
-        f"{np.mean(errors):.6f}"
+        f"{mean_rmse:.6f}"
     )
+
+    results.append(
+        {
+            "horizon": horizon,
+            "rmse": mean_rmse
+        }
+    )
+
+    wandb.log(
+        {
+            "horizon": horizon,
+            "rmse": mean_rmse
+        }
+    )
+
+os.makedirs("results", exist_ok=True)
+
+df = pd.DataFrame(results)
+
+wandb.log({
+    "horizon_results": wandb.Table(
+        dataframe=df
+    )
+})
+
+df.to_csv(
+    "results/horizon_rmse.csv",
+    index=False
+)
+
+plt.figure(figsize=(8,5))
+
+plt.plot(
+    df["horizon"],
+    df["rmse"],
+    marker="o"
+)
+
+plt.xlabel("Prediction Horizon")
+plt.ylabel("RMSE")
+plt.title("Latent GRU World Model Long-Term Prediction Error")
+plt.grid()
+
+plt.savefig(
+    "results/horizon_rmse.png",
+    dpi=300,
+    bbox_inches="tight"
+)
+
+plt.show()
+
+wandb.finish()

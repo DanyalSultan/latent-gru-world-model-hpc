@@ -2,6 +2,7 @@ import os
 import numpy as np
 import torch
 import torch.nn as nn
+import wandb
 
 from torch.utils.data import (
     TensorDataset,
@@ -9,20 +10,33 @@ from torch.utils.data import (
     random_split
 )
 
+import yaml
+
 # Configuration
+
+with open("configs/train_config.yaml", "r") as f:
+    config = yaml.safe_load(f)
+
+wandb.init(
+    project="latent-gru-world-model",
+    name="latent-gru-baseline",
+    config=config
+)
+
 SEQ_LEN = 20
 STATE_DIM = 77
 ACTION_DIM = 7
 INPUT_DIM = STATE_DIM + ACTION_DIM
 
-LATENT_DIM = 32
-GRU_HIDDEN_DIM = 128
-BATCH_SIZE = 128
-EPOCHS = 75
-LEARNING_RATE = 1e-3
+LATENT_DIM = config["model"]["latent_dim"]
+GRU_HIDDEN_DIM = config["model"]["gru_hidden_dim"]
 
-RECON_WEIGHT = 1.0
-DYNAMICS_WEIGHT = 1.0
+BATCH_SIZE = config["training"]["batch_size"]
+EPOCHS = config["training"]["epochs"]
+LEARNING_RATE = config["training"]["learning_rate"]
+
+RECON_WEIGHT = config["loss"]["recon_weight"]
+DYNAMICS_WEIGHT = config["loss"]["dynamics_weight"]
 
 MODEL_PATH = "models/latent_gru_world_model.pt"
 
@@ -154,6 +168,11 @@ print("Device:", device)
 
 model = LatentGRUWorldModel().to(device)
 
+wandb.config.update({
+    "device": str(device),
+    "parameters": sum(p.numel() for p in model.parameters())
+})
+
 mse = nn.MSELoss()
 
 optimizer = torch.optim.Adam(model.parameters(), lr=LEARNING_RATE)
@@ -255,6 +274,15 @@ for epoch in range(EPOCHS):
         f"Recon {val_reconstruction_loss:.6f}"
     )
 
+    wandb.log({
+    "epoch": epoch + 1,
+    "train_loss": train_total_loss,
+    "val_loss": val_total_loss,
+    "prediction_loss": val_prediction_loss,
+    "latent_loss": val_latent_loss,
+    "reconstruction_loss": val_reconstruction_loss
+})
+
     if val_total_loss < best_val_loss:
         best_val_loss = val_total_loss
         torch.save(
@@ -262,5 +290,8 @@ for epoch in range(EPOCHS):
             MODEL_PATH
         )
 
+wandb.save(MODEL_PATH)
+
 print("\nBest validation loss:", best_val_loss)
 print("Saved model:", MODEL_PATH)
+wandb.finish()

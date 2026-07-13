@@ -1,9 +1,16 @@
+# Data
 dataset/
+
+# Model checkpoints
 models/
-results/
+
+# Logs
 logs/
 *.out
-__pycache__/dataset/
-models/
-*.out
-dataset
+
+# Results
+results/
+
+# Python
+__pycache__/
+*.pyc

@@ -1,0 +1,18 @@
+experiment:
+  name: latentgru_200epochs
+
+training:
+  epochs: 200
+  batch_size: 128
+  learning_rate: 0.001
+
+model:
+  latent_dim: 32
+  gru_hidden_dim: 128
+  state_dim: 77
+  action_dim: 7
+  seq_len: 20
+
+loss:
+  recon_weight: 1.0
+  dynamics_weight: 1.0

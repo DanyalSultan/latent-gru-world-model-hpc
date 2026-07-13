@@ -1,0 +1,28 @@
+{
+  "os": "Linux-3.10.0-1160.149.1.el7.x86_64-x86_64-with-glibc2.17",
+  "python": "CPython 3.10.18",
+  "startedAt": "2026-07-13T22:00:12.576821Z",
+  "program": "/mnt/parscratch/users/aca22mds/projects/latent-gru-world-model/Latent-GRU-World-Model/scripts/rollout_latent_gru_model.py",
+  "codePath": "scripts/rollout_latent_gru_model.py",
+  "codePathLocal": "scripts/rollout_latent_gru_model.py",
+  "git": {
+    "remote": "https://github.com/zaryanaliansari9/Latent-GRU-World-Model.git",
+    "commit": "6ca7089344259fc2b6746b7d9d6dc52094d27ef0"
+  },
+  "email": "92danyalsultan@gmail.com",
+  "root": "/mnt/parscratch/users/aca22mds/projects/latent-gru-world-model/Latent-GRU-World-Model",
+  "host": "login2.pri.stanage.alces.network",
+  "executable": "/users/aca22mds/.conda/envs/latentgru/bin/python",
+  "cpu_count": 64,
+  "cpu_count_logical": 64,
+  "disk": {
+    "/": {
+      "total": "16776032256",
+      "used": "10587934720"
+    }
+  },
+  "memory": {
+    "total": "1081432526848"
+  },
+  "writerId": "yxdpzqwyu9g644lluqn6va13w7o93e15"
+}

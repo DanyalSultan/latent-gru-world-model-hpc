@@ -1,0 +1,9 @@
+/users/aca22mds/.conda/envs/latentgru/lib/python3.10/site-packages/torch/_utils.py:776: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+State shape: (1000, 77)
+  1-step RMSE = 0.036662
+  5-step RMSE = 0.057125
+ 10-step RMSE = 0.070251
+ 20-step RMSE = 0.092729
+ 50-step RMSE = 0.132867
+100-step RMSE = 0.161689
