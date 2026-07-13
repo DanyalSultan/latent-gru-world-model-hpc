@@ -1,4 +1,9 @@
 dataset/
 models/
+results/
+logs/
+*.out
+__pycache__/dataset/
+models/
 *.out
 dataset
