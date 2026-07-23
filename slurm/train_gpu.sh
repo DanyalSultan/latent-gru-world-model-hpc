@@ -7,6 +7,8 @@
 #SBATCH --time=04:00:00
 #SBATCH --output=logs/train_%j.out
 
+set -e
+
 module load Anaconda3
 
 source activate latentgru
@@ -23,9 +25,4 @@ echo "Starting Latent GRU training..."
 
 python scripts/train_latent_gru_world_model.py
 
-if [ $? -eq 0 ]; then
-    echo "Training finished successfully."
-else
-    echo "Training failed."
-    exit 1
-fi
+echo "Training finished successfully."

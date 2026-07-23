@@ -1,0 +1,612 @@
+Starting Latent GRU experiment
+Training...
+wandb: Currently logged in as: 92danyalsultan (IML-Research) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: setting up run ywjya7u4
+wandb: Tracking run with wandb version 0.23.0
+wandb: Run data is saved locally in /mnt/parscratch/users/aca22mds/projects/latent-gru-world-model/Latent-GRU-World-Model/wandb/run-20260714_024246-ywjya7u4
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run latent-gru-train-hpc-a100-10825452
+wandb: ⭐️ View project at https://wandb.ai/IML-Research/latent-gru-world-model
+wandb: 🚀 View run at https://wandb.ai/IML-Research/latent-gru-world-model/runs/ywjya7u4
+Using device: cuda
+X: (19580, 20, 84)
+Y: (19580, 77)
+Device: cuda
+GPU: NVIDIA A100-SXM4-80GB
+Epoch 001 | Train 1.602334 | Val 1.082826 | Pred 0.545156 | Latent 0.012489 | Recon 0.525181
+Epoch 002 | Train 0.770315 | Val 0.558176 | Pred 0.279677 | Latent 0.009258 | Recon 0.269240
+Epoch 003 | Train 0.469041 | Val 0.403962 | Pred 0.202782 | Latent 0.008270 | Recon 0.192910
+Epoch 004 | Train 0.362489 | Val 0.325999 | Pred 0.162768 | Latent 0.009132 | Recon 0.154098
+Epoch 005 | Train 0.296025 | Val 0.275976 | Pred 0.138388 | Latent 0.008804 | Recon 0.128784
+Epoch 006 | Train 0.248037 | Val 0.233040 | Pred 0.117084 | Latent 0.008093 | Recon 0.107863
+Epoch 007 | Train 0.214177 | Val 0.209748 | Pred 0.105538 | Latent 0.007888 | Recon 0.096323
+Epoch 008 | Train 0.190503 | Val 0.188033 | Pred 0.094545 | Latent 0.007030 | Recon 0.086458
+Epoch 009 | Train 0.171851 | Val 0.171484 | Pred 0.086369 | Latent 0.006765 | Recon 0.078350
+Epoch 010 | Train 0.157000 | Val 0.161411 | Pred 0.081403 | Latent 0.006510 | Recon 0.073498
+Epoch 011 | Train 0.147902 | Val 0.151480 | Pred 0.076321 | Latent 0.006023 | Recon 0.069137
+Epoch 012 | Train 0.138232 | Val 0.145065 | Pred 0.072493 | Latent 0.006914 | Recon 0.065658
+Epoch 013 | Train 0.131880 | Val 0.136099 | Pred 0.067054 | Latent 0.006467 | Recon 0.062578
+Epoch 014 | Train 0.125516 | Val 0.132529 | Pred 0.066576 | Latent 0.006152 | Recon 0.059800
+Epoch 015 | Train 0.119602 | Val 0.127272 | Pred 0.064385 | Latent 0.005951 | Recon 0.056937
+Epoch 016 | Train 0.115687 | Val 0.122637 | Pred 0.061819 | Latent 0.005572 | Recon 0.055245
+Epoch 017 | Train 0.111346 | Val 0.119668 | Pred 0.060354 | Latent 0.005891 | Recon 0.053422
+Epoch 018 | Train 0.107246 | Val 0.115879 | Pred 0.058301 | Latent 0.005912 | Recon 0.051666
+Epoch 019 | Train 0.103473 | Val 0.112036 | Pred 0.056702 | Latent 0.005868 | Recon 0.049466
+Epoch 020 | Train 0.100335 | Val 0.106512 | Pred 0.053721 | Latent 0.005635 | Recon 0.047156
+Epoch 021 | Train 0.096930 | Val 0.102493 | Pred 0.052098 | Latent 0.005466 | Recon 0.044929
+Epoch 022 | Train 0.093357 | Val 0.099953 | Pred 0.051060 | Latent 0.005131 | Recon 0.043761
+Epoch 023 | Train 0.091657 | Val 0.095013 | Pred 0.047746 | Latent 0.005080 | Recon 0.042187
+Epoch 024 | Train 0.087780 | Val 0.093993 | Pred 0.047357 | Latent 0.005367 | Recon 0.041269
+Epoch 025 | Train 0.086594 | Val 0.093474 | Pred 0.046932 | Latent 0.005305 | Recon 0.041238
+Epoch 026 | Train 0.084380 | Val 0.091909 | Pred 0.046831 | Latent 0.005468 | Recon 0.039610
+Epoch 027 | Train 0.081808 | Val 0.086620 | Pred 0.043301 | Latent 0.005006 | Recon 0.038313
+Epoch 028 | Train 0.080140 | Val 0.082758 | Pred 0.041142 | Latent 0.004973 | Recon 0.036643
+Epoch 029 | Train 0.077300 | Val 0.086649 | Pred 0.044357 | Latent 0.005012 | Recon 0.037280
+Epoch 030 | Train 0.075916 | Val 0.083465 | Pred 0.042284 | Latent 0.005727 | Recon 0.035455
+Epoch 031 | Train 0.074568 | Val 0.084111 | Pred 0.043202 | Latent 0.005552 | Recon 0.035358
+Epoch 032 | Train 0.073774 | Val 0.079171 | Pred 0.040017 | Latent 0.004813 | Recon 0.034341
+Epoch 033 | Train 0.071066 | Val 0.082429 | Pred 0.041813 | Latent 0.006751 | Recon 0.033866
+Epoch 034 | Train 0.069753 | Val 0.081549 | Pred 0.042727 | Latent 0.005220 | Recon 0.033602
+Epoch 035 | Train 0.068662 | Val 0.074350 | Pred 0.037969 | Latent 0.004363 | Recon 0.032017
+Epoch 036 | Train 0.067477 | Val 0.073957 | Pred 0.037552 | Latent 0.004962 | Recon 0.031443
+Epoch 037 | Train 0.065865 | Val 0.072378 | Pred 0.036713 | Latent 0.004541 | Recon 0.031124
+Epoch 038 | Train 0.064569 | Val 0.067501 | Pred 0.033914 | Latent 0.004168 | Recon 0.029418
+Epoch 039 | Train 0.062695 | Val 0.070881 | Pred 0.036262 | Latent 0.004374 | Recon 0.030246
+Epoch 040 | Train 0.062013 | Val 0.067681 | Pred 0.034504 | Latent 0.004440 | Recon 0.028737
+Epoch 041 | Train 0.061589 | Val 0.068950 | Pred 0.035204 | Latent 0.004413 | Recon 0.029333
+Epoch 042 | Train 0.060526 | Val 0.065989 | Pred 0.033533 | Latent 0.004269 | Recon 0.028187
+Epoch 043 | Train 0.059563 | Val 0.066135 | Pred 0.034107 | Latent 0.004369 | Recon 0.027659
+Epoch 044 | Train 0.059195 | Val 0.063374 | Pred 0.032447 | Latent 0.004021 | Recon 0.026907
+Epoch 045 | Train 0.057195 | Val 0.063669 | Pred 0.032600 | Latent 0.004180 | Recon 0.026889
+Epoch 046 | Train 0.056686 | Val 0.062133 | Pred 0.031750 | Latent 0.003880 | Recon 0.026502
+Epoch 047 | Train 0.055394 | Val 0.063768 | Pred 0.032950 | Latent 0.004301 | Recon 0.026518
+Epoch 048 | Train 0.055157 | Val 0.062202 | Pred 0.031981 | Latent 0.003918 | Recon 0.026302
+Epoch 049 | Train 0.054140 | Val 0.058329 | Pred 0.029420 | Latent 0.003854 | Recon 0.025055
+Epoch 050 | Train 0.053380 | Val 0.058459 | Pred 0.029554 | Latent 0.003939 | Recon 0.024966
+Epoch 051 | Train 0.053118 | Val 0.061396 | Pred 0.031767 | Latent 0.004089 | Recon 0.025541
+Epoch 052 | Train 0.052825 | Val 0.058246 | Pred 0.029806 | Latent 0.003815 | Recon 0.024626
+Epoch 053 | Train 0.051641 | Val 0.057272 | Pred 0.029391 | Latent 0.003885 | Recon 0.023996
+Epoch 054 | Train 0.050881 | Val 0.056676 | Pred 0.028882 | Latent 0.003883 | Recon 0.023911
+Epoch 055 | Train 0.050730 | Val 0.063431 | Pred 0.033801 | Latent 0.005118 | Recon 0.024513
+Epoch 056 | Train 0.051784 | Val 0.054889 | Pred 0.028168 | Latent 0.003630 | Recon 0.023091
+Epoch 057 | Train 0.049093 | Val 0.060081 | Pred 0.031172 | Latent 0.004064 | Recon 0.024845
+Epoch 058 | Train 0.049652 | Val 0.055266 | Pred 0.028946 | Latent 0.003757 | Recon 0.022564
+Epoch 059 | Train 0.048766 | Val 0.052168 | Pred 0.026419 | Latent 0.003481 | Recon 0.022268
+Epoch 060 | Train 0.047498 | Val 0.053147 | Pred 0.027478 | Latent 0.003542 | Recon 0.022127
+Epoch 061 | Train 0.047028 | Val 0.051045 | Pred 0.026126 | Latent 0.003555 | Recon 0.021364
+Epoch 062 | Train 0.047064 | Val 0.055020 | Pred 0.028377 | Latent 0.003586 | Recon 0.023057
+Epoch 063 | Train 0.047778 | Val 0.051050 | Pred 0.026059 | Latent 0.003338 | Recon 0.021653
+Epoch 064 | Train 0.045734 | Val 0.052855 | Pred 0.027398 | Latent 0.003543 | Recon 0.021914
+Epoch 065 | Train 0.046286 | Val 0.051978 | Pred 0.026972 | Latent 0.003660 | Recon 0.021346
+Epoch 066 | Train 0.045237 | Val 0.051322 | Pred 0.026728 | Latent 0.003550 | Recon 0.021043
+Epoch 067 | Train 0.044320 | Val 0.051934 | Pred 0.026822 | Latent 0.003444 | Recon 0.021669
+Epoch 068 | Train 0.043729 | Val 0.050300 | Pred 0.025769 | Latent 0.003319 | Recon 0.021212
+Epoch 069 | Train 0.043403 | Val 0.050155 | Pred 0.025779 | Latent 0.003478 | Recon 0.020898
+Epoch 070 | Train 0.043260 | Val 0.049450 | Pred 0.025533 | Latent 0.003425 | Recon 0.020491
+Epoch 071 | Train 0.042920 | Val 0.051225 | Pred 0.026918 | Latent 0.003449 | Recon 0.020858
+Epoch 072 | Train 0.042662 | Val 0.050845 | Pred 0.026146 | Latent 0.003429 | Recon 0.021271
+Epoch 073 | Train 0.043385 | Val 0.056141 | Pred 0.031001 | Latent 0.004710 | Recon 0.020429
+Epoch 074 | Train 0.043847 | Val 0.049495 | Pred 0.026081 | Latent 0.003288 | Recon 0.020126
+Epoch 075 | Train 0.041824 | Val 0.049554 | Pred 0.026675 | Latent 0.003889 | Recon 0.018991
+Epoch 076 | Train 0.041495 | Val 0.047738 | Pred 0.025011 | Latent 0.003288 | Recon 0.019439
+Epoch 077 | Train 0.040600 | Val 0.046254 | Pred 0.024285 | Latent 0.003281 | Recon 0.018688
+Epoch 078 | Train 0.040646 | Val 0.045389 | Pred 0.023643 | Latent 0.003116 | Recon 0.018630
+Epoch 079 | Train 0.040256 | Val 0.049019 | Pred 0.025914 | Latent 0.003265 | Recon 0.019841
+Epoch 080 | Train 0.040370 | Val 0.048057 | Pred 0.025581 | Latent 0.003484 | Recon 0.018991
+Epoch 081 | Train 0.040395 | Val 0.044923 | Pred 0.023382 | Latent 0.003173 | Recon 0.018368
+Epoch 082 | Train 0.039362 | Val 0.046299 | Pred 0.024042 | Latent 0.003071 | Recon 0.019186
+Epoch 083 | Train 0.039439 | Val 0.046168 | Pred 0.024521 | Latent 0.003168 | Recon 0.018480
+Epoch 084 | Train 0.038813 | Val 0.048487 | Pred 0.026599 | Latent 0.003667 | Recon 0.018220
+Epoch 085 | Train 0.039281 | Val 0.047805 | Pred 0.025627 | Latent 0.003248 | Recon 0.018931
+Epoch 086 | Train 0.039460 | Val 0.045521 | Pred 0.024074 | Latent 0.003180 | Recon 0.018267
+Epoch 087 | Train 0.038397 | Val 0.049749 | Pred 0.026560 | Latent 0.003341 | Recon 0.019848
+Epoch 088 | Train 0.039363 | Val 0.042466 | Pred 0.022022 | Latent 0.003003 | Recon 0.017442
+Epoch 089 | Train 0.037356 | Val 0.042097 | Pred 0.021927 | Latent 0.002930 | Recon 0.017241
+Epoch 090 | Train 0.037511 | Val 0.042901 | Pred 0.022442 | Latent 0.002941 | Recon 0.017518
+Epoch 091 | Train 0.036644 | Val 0.047118 | Pred 0.025393 | Latent 0.003698 | Recon 0.018027
+Epoch 092 | Train 0.037686 | Val 0.045655 | Pred 0.024376 | Latent 0.003162 | Recon 0.018116
+Epoch 093 | Train 0.037600 | Val 0.048444 | Pred 0.026195 | Latent 0.003568 | Recon 0.018682
+Epoch 094 | Train 0.038045 | Val 0.041562 | Pred 0.021948 | Latent 0.003010 | Recon 0.016603
+Epoch 095 | Train 0.036103 | Val 0.043673 | Pred 0.023085 | Latent 0.003032 | Recon 0.017557
+Epoch 096 | Train 0.036132 | Val 0.040793 | Pred 0.021572 | Latent 0.002975 | Recon 0.016246
+Epoch 097 | Train 0.035351 | Val 0.043974 | Pred 0.023745 | Latent 0.003066 | Recon 0.017163
+Epoch 098 | Train 0.035561 | Val 0.042610 | Pred 0.022887 | Latent 0.002984 | Recon 0.016739
+Epoch 099 | Train 0.035489 | Val 0.039198 | Pred 0.020581 | Latent 0.002759 | Recon 0.015858
+Epoch 100 | Train 0.035199 | Val 0.044057 | Pred 0.023649 | Latent 0.003000 | Recon 0.017408
+Epoch 101 | Train 0.035899 | Val 0.045068 | Pred 0.024178 | Latent 0.003449 | Recon 0.017441
+Epoch 102 | Train 0.035555 | Val 0.043343 | Pred 0.023657 | Latent 0.003117 | Recon 0.016569
+Epoch 103 | Train 0.035406 | Val 0.040201 | Pred 0.021326 | Latent 0.002860 | Recon 0.016015
+Epoch 104 | Train 0.034710 | Val 0.040406 | Pred 0.021533 | Latent 0.002906 | Recon 0.015967
+Epoch 105 | Train 0.035255 | Val 0.040482 | Pred 0.021567 | Latent 0.002862 | Recon 0.016054
+Epoch 106 | Train 0.034405 | Val 0.043045 | Pred 0.023184 | Latent 0.003145 | Recon 0.016716
+Epoch 107 | Train 0.034645 | Val 0.038106 | Pred 0.020309 | Latent 0.002694 | Recon 0.015103
+Epoch 108 | Train 0.033654 | Val 0.041919 | Pred 0.022674 | Latent 0.003007 | Recon 0.016238
+Epoch 109 | Train 0.034356 | Val 0.042051 | Pred 0.022555 | Latent 0.002936 | Recon 0.016561
+Epoch 110 | Train 0.033706 | Val 0.039839 | Pred 0.021568 | Latent 0.003014 | Recon 0.015257
+Epoch 111 | Train 0.033359 | Val 0.037771 | Pred 0.020022 | Latent 0.002682 | Recon 0.015066
+Epoch 112 | Train 0.032661 | Val 0.040147 | Pred 0.021047 | Latent 0.002972 | Recon 0.016128
+Epoch 113 | Train 0.034001 | Val 0.043214 | Pred 0.023254 | Latent 0.003359 | Recon 0.016601
+Epoch 114 | Train 0.033759 | Val 0.044181 | Pred 0.024479 | Latent 0.003110 | Recon 0.016591
+Epoch 115 | Train 0.033762 | Val 0.039560 | Pred 0.021236 | Latent 0.002754 | Recon 0.015570
+Epoch 116 | Train 0.032881 | Val 0.038348 | Pred 0.020175 | Latent 0.002704 | Recon 0.015469
+Epoch 117 | Train 0.032053 | Val 0.038070 | Pred 0.020237 | Latent 0.002751 | Recon 0.015083
+Epoch 118 | Train 0.032422 | Val 0.037779 | Pred 0.020264 | Latent 0.002673 | Recon 0.014842
+Epoch 119 | Train 0.031848 | Val 0.039259 | Pred 0.021093 | Latent 0.002707 | Recon 0.015459
+Epoch 120 | Train 0.031575 | Val 0.038432 | Pred 0.020597 | Latent 0.002622 | Recon 0.015213
+Epoch 121 | Train 0.031777 | Val 0.040362 | Pred 0.021378 | Latent 0.003016 | Recon 0.015968
+Epoch 122 | Train 0.032404 | Val 0.039249 | Pred 0.021340 | Latent 0.002729 | Recon 0.015180
+Epoch 123 | Train 0.032001 | Val 0.037562 | Pred 0.019820 | Latent 0.002621 | Recon 0.015121
+Epoch 124 | Train 0.031431 | Val 0.036758 | Pred 0.019321 | Latent 0.002608 | Recon 0.014830
+Epoch 125 | Train 0.031289 | Val 0.035171 | Pred 0.018736 | Latent 0.002678 | Recon 0.013757
+Epoch 126 | Train 0.030593 | Val 0.038857 | Pred 0.020574 | Latent 0.002886 | Recon 0.015396
+Epoch 127 | Train 0.030948 | Val 0.034615 | Pred 0.018413 | Latent 0.002487 | Recon 0.013715
+Epoch 128 | Train 0.030000 | Val 0.038061 | Pred 0.020501 | Latent 0.002611 | Recon 0.014949
+Epoch 129 | Train 0.030919 | Val 0.039553 | Pred 0.021909 | Latent 0.002882 | Recon 0.014762
+Epoch 130 | Train 0.031254 | Val 0.035971 | Pred 0.019064 | Latent 0.002585 | Recon 0.014322
+Epoch 131 | Train 0.030129 | Val 0.037543 | Pred 0.019909 | Latent 0.002739 | Recon 0.014895
+Epoch 132 | Train 0.030614 | Val 0.037393 | Pred 0.020164 | Latent 0.002661 | Recon 0.014568
+Epoch 133 | Train 0.030806 | Val 0.037269 | Pred 0.019955 | Latent 0.002724 | Recon 0.014590
+Epoch 134 | Train 0.030257 | Val 0.038621 | Pred 0.021403 | Latent 0.002635 | Recon 0.014583
+Epoch 135 | Train 0.030448 | Val 0.036638 | Pred 0.019820 | Latent 0.002579 | Recon 0.014239
+Epoch 136 | Train 0.030777 | Val 0.039310 | Pred 0.020720 | Latent 0.003013 | Recon 0.015576
+Epoch 137 | Train 0.030953 | Val 0.036158 | Pred 0.019355 | Latent 0.002732 | Recon 0.014072
+Epoch 138 | Train 0.030026 | Val 0.036265 | Pred 0.019136 | Latent 0.002616 | Recon 0.014514
+Epoch 139 | Train 0.030358 | Val 0.034336 | Pred 0.018354 | Latent 0.002558 | Recon 0.013424
+Epoch 140 | Train 0.028673 | Val 0.035817 | Pred 0.019274 | Latent 0.002418 | Recon 0.014125
+Epoch 141 | Train 0.028445 | Val 0.036374 | Pred 0.019572 | Latent 0.002577 | Recon 0.014225
+Epoch 142 | Train 0.028192 | Val 0.033250 | Pred 0.017759 | Latent 0.002409 | Recon 0.013082
+Epoch 143 | Train 0.028310 | Val 0.036929 | Pred 0.019565 | Latent 0.002630 | Recon 0.014733
+Epoch 144 | Train 0.029890 | Val 0.037189 | Pred 0.020216 | Latent 0.002663 | Recon 0.014310
+Epoch 145 | Train 0.029234 | Val 0.032777 | Pred 0.017307 | Latent 0.002379 | Recon 0.013091
+Epoch 146 | Train 0.027812 | Val 0.037005 | Pred 0.020364 | Latent 0.002526 | Recon 0.014115
+Epoch 147 | Train 0.028880 | Val 0.044251 | Pred 0.026432 | Latent 0.003375 | Recon 0.014444
+Epoch 148 | Train 0.031282 | Val 0.035364 | Pred 0.018564 | Latent 0.002635 | Recon 0.014166
+Epoch 149 | Train 0.029100 | Val 0.036670 | Pred 0.020055 | Latent 0.002516 | Recon 0.014100
+Epoch 150 | Train 0.028541 | Val 0.033912 | Pred 0.018134 | Latent 0.002526 | Recon 0.013252
+Epoch 151 | Train 0.030096 | Val 0.042300 | Pred 0.024752 | Latent 0.003046 | Recon 0.014502
+Epoch 152 | Train 0.030355 | Val 0.039106 | Pred 0.022592 | Latent 0.002943 | Recon 0.013571
+Epoch 153 | Train 0.029502 | Val 0.033742 | Pred 0.018533 | Latent 0.002415 | Recon 0.012794
+Epoch 154 | Train 0.027263 | Val 0.033161 | Pred 0.017609 | Latent 0.002326 | Recon 0.013226
+Epoch 155 | Train 0.027147 | Val 0.031766 | Pred 0.017153 | Latent 0.002239 | Recon 0.012374
+Epoch 156 | Train 0.026268 | Val 0.034358 | Pred 0.018488 | Latent 0.002274 | Recon 0.013596
+Epoch 157 | Train 0.028168 | Val 0.032910 | Pred 0.017641 | Latent 0.002250 | Recon 0.013020
+Epoch 158 | Train 0.028258 | Val 0.033122 | Pred 0.017749 | Latent 0.002429 | Recon 0.012944
+Epoch 159 | Train 0.027688 | Val 0.035800 | Pred 0.018877 | Latent 0.002831 | Recon 0.014092
+Epoch 160 | Train 0.028460 | Val 0.042334 | Pred 0.022665 | Latent 0.003111 | Recon 0.016558
+Epoch 161 | Train 0.030288 | Val 0.033450 | Pred 0.018208 | Latent 0.002325 | Recon 0.012917
+Epoch 162 | Train 0.026540 | Val 0.032371 | Pred 0.017724 | Latent 0.002377 | Recon 0.012270
+Epoch 163 | Train 0.025986 | Val 0.031583 | Pred 0.017391 | Latent 0.002362 | Recon 0.011830
+Epoch 164 | Train 0.026118 | Val 0.033369 | Pred 0.018188 | Latent 0.002334 | Recon 0.012847
+Epoch 165 | Train 0.027383 | Val 0.032587 | Pred 0.017482 | Latent 0.002275 | Recon 0.012830
+Epoch 166 | Train 0.026100 | Val 0.032237 | Pred 0.017708 | Latent 0.002312 | Recon 0.012217
+Epoch 167 | Train 0.025769 | Val 0.030876 | Pred 0.016764 | Latent 0.002271 | Recon 0.011841
+Epoch 168 | Train 0.026487 | Val 0.035565 | Pred 0.020337 | Latent 0.002620 | Recon 0.012608
+Epoch 169 | Train 0.027331 | Val 0.032517 | Pred 0.017720 | Latent 0.002226 | Recon 0.012572
+Epoch 170 | Train 0.026764 | Val 0.031048 | Pred 0.016696 | Latent 0.002346 | Recon 0.012006
+Epoch 171 | Train 0.025696 | Val 0.031163 | Pred 0.016815 | Latent 0.002238 | Recon 0.012111
+Epoch 172 | Train 0.025128 | Val 0.032994 | Pred 0.017902 | Latent 0.002234 | Recon 0.012859
+Epoch 173 | Train 0.025298 | Val 0.030899 | Pred 0.016607 | Latent 0.002089 | Recon 0.012203
+Epoch 174 | Train 0.024873 | Val 0.030880 | Pred 0.016630 | Latent 0.002156 | Recon 0.012094
+Epoch 175 | Train 0.024925 | Val 0.030284 | Pred 0.016314 | Latent 0.002143 | Recon 0.011827
+Epoch 176 | Train 0.024858 | Val 0.033335 | Pred 0.018577 | Latent 0.002279 | Recon 0.012479
+Epoch 177 | Train 0.025846 | Val 0.033367 | Pred 0.017839 | Latent 0.002166 | Recon 0.013363
+Epoch 178 | Train 0.024791 | Val 0.032963 | Pred 0.018277 | Latent 0.002258 | Recon 0.012428
+Epoch 179 | Train 0.025107 | Val 0.030841 | Pred 0.016834 | Latent 0.002338 | Recon 0.011669
+Epoch 180 | Train 0.024517 | Val 0.031416 | Pred 0.017259 | Latent 0.002459 | Recon 0.011698
+Epoch 181 | Train 0.024822 | Val 0.032639 | Pred 0.018255 | Latent 0.002498 | Recon 0.011886
+Epoch 182 | Train 0.025368 | Val 0.031622 | Pred 0.017345 | Latent 0.002278 | Recon 0.011999
+Epoch 183 | Train 0.025421 | Val 0.030422 | Pred 0.016555 | Latent 0.002073 | Recon 0.011795
+Epoch 184 | Train 0.023786 | Val 0.030609 | Pred 0.016821 | Latent 0.002150 | Recon 0.011638
+Epoch 185 | Train 0.023941 | Val 0.029765 | Pred 0.016125 | Latent 0.002102 | Recon 0.011538
+Epoch 186 | Train 0.023790 | Val 0.028664 | Pred 0.015461 | Latent 0.002050 | Recon 0.011152
+Epoch 187 | Train 0.023514 | Val 0.038232 | Pred 0.022328 | Latent 0.002640 | Recon 0.013265
+Epoch 188 | Train 0.025946 | Val 0.041585 | Pred 0.024470 | Latent 0.002558 | Recon 0.014558
+Epoch 189 | Train 0.025347 | Val 0.028966 | Pred 0.015879 | Latent 0.002094 | Recon 0.010993
+Epoch 190 | Train 0.023429 | Val 0.029412 | Pred 0.016312 | Latent 0.002205 | Recon 0.010895
+Epoch 191 | Train 0.023710 | Val 0.029214 | Pred 0.015830 | Latent 0.002091 | Recon 0.011293
+Epoch 192 | Train 0.023615 | Val 0.033044 | Pred 0.018403 | Latent 0.002183 | Recon 0.012458
+Epoch 193 | Train 0.023735 | Val 0.029681 | Pred 0.016109 | Latent 0.002072 | Recon 0.011500
+Epoch 194 | Train 0.023434 | Val 0.034785 | Pred 0.019379 | Latent 0.002457 | Recon 0.012950
+Epoch 195 | Train 0.023969 | Val 0.033685 | Pred 0.018943 | Latent 0.002188 | Recon 0.012553
+Epoch 196 | Train 0.024456 | Val 0.028314 | Pred 0.015282 | Latent 0.001959 | Recon 0.011073
+Epoch 197 | Train 0.022679 | Val 0.027789 | Pred 0.014972 | Latent 0.001954 | Recon 0.010863
+Epoch 198 | Train 0.022510 | Val 0.029797 | Pred 0.016419 | Latent 0.002041 | Recon 0.011337
+Epoch 199 | Train 0.022834 | Val 0.030250 | Pred 0.016482 | Latent 0.002100 | Recon 0.011668
+Epoch 200 | Train 0.022849 | Val 0.030470 | Pred 0.016598 | Latent 0.002039 | Recon 0.011833
+Epoch 201 | Train 0.022861 | Val 0.028676 | Pred 0.015538 | Latent 0.002052 | Recon 0.011086
+Epoch 202 | Train 0.023008 | Val 0.027487 | Pred 0.015098 | Latent 0.002031 | Recon 0.010358
+Epoch 203 | Train 0.022549 | Val 0.033962 | Pred 0.019448 | Latent 0.002509 | Recon 0.012004
+Epoch 204 | Train 0.024213 | Val 0.030736 | Pred 0.016969 | Latent 0.002041 | Recon 0.011727
+Epoch 205 | Train 0.022829 | Val 0.027442 | Pred 0.014883 | Latent 0.002013 | Recon 0.010546
+Epoch 206 | Train 0.022095 | Val 0.028057 | Pred 0.015198 | Latent 0.001928 | Recon 0.010931
+Epoch 207 | Train 0.022183 | Val 0.028448 | Pred 0.015373 | Latent 0.002012 | Recon 0.011063
+Epoch 208 | Train 0.022325 | Val 0.027867 | Pred 0.015053 | Latent 0.001898 | Recon 0.010916
+Epoch 209 | Train 0.022313 | Val 0.031467 | Pred 0.017543 | Latent 0.002031 | Recon 0.011893
+Epoch 210 | Train 0.022081 | Val 0.029011 | Pred 0.015638 | Latent 0.001929 | Recon 0.011444
+Epoch 211 | Train 0.022182 | Val 0.031579 | Pred 0.017403 | Latent 0.002120 | Recon 0.012055
+Epoch 212 | Train 0.023035 | Val 0.028266 | Pred 0.015781 | Latent 0.002042 | Recon 0.010443
+Epoch 213 | Train 0.022723 | Val 0.031011 | Pred 0.017071 | Latent 0.001985 | Recon 0.011955
+Epoch 214 | Train 0.022121 | Val 0.030882 | Pred 0.017178 | Latent 0.002118 | Recon 0.011586
+Epoch 215 | Train 0.022217 | Val 0.029111 | Pred 0.016183 | Latent 0.002028 | Recon 0.010900
+Epoch 216 | Train 0.022069 | Val 0.028076 | Pred 0.015541 | Latent 0.001952 | Recon 0.010582
+Epoch 217 | Train 0.021411 | Val 0.029632 | Pred 0.016449 | Latent 0.002032 | Recon 0.011151
+Epoch 218 | Train 0.021787 | Val 0.027340 | Pred 0.014971 | Latent 0.001925 | Recon 0.010444
+Epoch 219 | Train 0.020989 | Val 0.027565 | Pred 0.014991 | Latent 0.001934 | Recon 0.010639
+Epoch 220 | Train 0.021631 | Val 0.031438 | Pred 0.017843 | Latent 0.001994 | Recon 0.011601
+Epoch 221 | Train 0.022026 | Val 0.028570 | Pred 0.015859 | Latent 0.001939 | Recon 0.010772
+Epoch 222 | Train 0.021904 | Val 0.027354 | Pred 0.014623 | Latent 0.001878 | Recon 0.010854
+Epoch 223 | Train 0.020942 | Val 0.026769 | Pred 0.014401 | Latent 0.001909 | Recon 0.010459
+Epoch 224 | Train 0.021026 | Val 0.027491 | Pred 0.015071 | Latent 0.001867 | Recon 0.010553
+Epoch 225 | Train 0.021451 | Val 0.027022 | Pred 0.014725 | Latent 0.001958 | Recon 0.010339
+Epoch 226 | Train 0.021913 | Val 0.027826 | Pred 0.015068 | Latent 0.001927 | Recon 0.010831
+Epoch 227 | Train 0.021164 | Val 0.028285 | Pred 0.015462 | Latent 0.001892 | Recon 0.010930
+Epoch 228 | Train 0.021463 | Val 0.026619 | Pred 0.014555 | Latent 0.001874 | Recon 0.010190
+Epoch 229 | Train 0.020894 | Val 0.028630 | Pred 0.015446 | Latent 0.001873 | Recon 0.011311
+Epoch 230 | Train 0.020961 | Val 0.027448 | Pred 0.015309 | Latent 0.001997 | Recon 0.010143
+Epoch 231 | Train 0.021890 | Val 0.033303 | Pred 0.018598 | Latent 0.002193 | Recon 0.012511
+Epoch 232 | Train 0.023524 | Val 0.026196 | Pred 0.014483 | Latent 0.001943 | Recon 0.009770
+Epoch 233 | Train 0.020524 | Val 0.026455 | Pred 0.014681 | Latent 0.001899 | Recon 0.009876
+Epoch 234 | Train 0.020827 | Val 0.028874 | Pred 0.016388 | Latent 0.002050 | Recon 0.010436
+Epoch 235 | Train 0.021724 | Val 0.025863 | Pred 0.014274 | Latent 0.001922 | Recon 0.009667
+Epoch 236 | Train 0.020094 | Val 0.025999 | Pred 0.014305 | Latent 0.001725 | Recon 0.009969
+Epoch 237 | Train 0.020250 | Val 0.027125 | Pred 0.014780 | Latent 0.001871 | Recon 0.010474
+Epoch 238 | Train 0.020475 | Val 0.028039 | Pred 0.015715 | Latent 0.001852 | Recon 0.010472
+Epoch 239 | Train 0.020509 | Val 0.041798 | Pred 0.025592 | Latent 0.002509 | Recon 0.013697
+Epoch 240 | Train 0.022703 | Val 0.028383 | Pred 0.015639 | Latent 0.001894 | Recon 0.010851
+Epoch 241 | Train 0.020203 | Val 0.025881 | Pred 0.013938 | Latent 0.001787 | Recon 0.010156
+Epoch 242 | Train 0.019534 | Val 0.025764 | Pred 0.014243 | Latent 0.001804 | Recon 0.009717
+Epoch 243 | Train 0.019921 | Val 0.026390 | Pred 0.014299 | Latent 0.001807 | Recon 0.010284
+Epoch 244 | Train 0.020376 | Val 0.028232 | Pred 0.015322 | Latent 0.001762 | Recon 0.011148
+Epoch 245 | Train 0.019982 | Val 0.024992 | Pred 0.013816 | Latent 0.001809 | Recon 0.009367
+Epoch 246 | Train 0.019130 | Val 0.025609 | Pred 0.013938 | Latent 0.001781 | Recon 0.009890
+Epoch 247 | Train 0.019832 | Val 0.028776 | Pred 0.015426 | Latent 0.001858 | Recon 0.011492
+Epoch 248 | Train 0.020552 | Val 0.039674 | Pred 0.021407 | Latent 0.002346 | Recon 0.015921
+Epoch 249 | Train 0.024217 | Val 0.027302 | Pred 0.014603 | Latent 0.001889 | Recon 0.010811
+Epoch 250 | Train 0.019754 | Val 0.025586 | Pred 0.014204 | Latent 0.001790 | Recon 0.009592
+Epoch 251 | Train 0.019524 | Val 0.026129 | Pred 0.014433 | Latent 0.001762 | Recon 0.009933
+Epoch 252 | Train 0.019160 | Val 0.025912 | Pred 0.014605 | Latent 0.001755 | Recon 0.009552
+Epoch 253 | Train 0.019114 | Val 0.023860 | Pred 0.012871 | Latent 0.001712 | Recon 0.009277
+Epoch 254 | Train 0.018731 | Val 0.024257 | Pred 0.013490 | Latent 0.001741 | Recon 0.009025
+Epoch 255 | Train 0.019474 | Val 0.028184 | Pred 0.015785 | Latent 0.001804 | Recon 0.010595
+Epoch 256 | Train 0.020094 | Val 0.026043 | Pred 0.014747 | Latent 0.001839 | Recon 0.009457
+Epoch 257 | Train 0.019157 | Val 0.025052 | Pred 0.013688 | Latent 0.001779 | Recon 0.009586
+Epoch 258 | Train 0.018880 | Val 0.023767 | Pred 0.012713 | Latent 0.001689 | Recon 0.009364
+Epoch 259 | Train 0.018706 | Val 0.026118 | Pred 0.014545 | Latent 0.001723 | Recon 0.009851
+Epoch 260 | Train 0.019369 | Val 0.027924 | Pred 0.015513 | Latent 0.001817 | Recon 0.010593
+Epoch 261 | Train 0.020233 | Val 0.026712 | Pred 0.014718 | Latent 0.001757 | Recon 0.010237
+Epoch 262 | Train 0.019443 | Val 0.025481 | Pred 0.014138 | Latent 0.001744 | Recon 0.009598
+Epoch 263 | Train 0.019756 | Val 0.028347 | Pred 0.015413 | Latent 0.001776 | Recon 0.011158
+Epoch 264 | Train 0.019700 | Val 0.026220 | Pred 0.014489 | Latent 0.001757 | Recon 0.009975
+Epoch 265 | Train 0.019402 | Val 0.025560 | Pred 0.014143 | Latent 0.001729 | Recon 0.009689
+Epoch 266 | Train 0.018804 | Val 0.024740 | Pred 0.013715 | Latent 0.001701 | Recon 0.009325
+Epoch 267 | Train 0.018637 | Val 0.026983 | Pred 0.015210 | Latent 0.001733 | Recon 0.010040
+Epoch 268 | Train 0.018974 | Val 0.030501 | Pred 0.017153 | Latent 0.001854 | Recon 0.011495
+Epoch 269 | Train 0.019803 | Val 0.023628 | Pred 0.012828 | Latent 0.001670 | Recon 0.009130
+Epoch 270 | Train 0.018080 | Val 0.026227 | Pred 0.014629 | Latent 0.001668 | Recon 0.009930
+Epoch 271 | Train 0.018793 | Val 0.025054 | Pred 0.014107 | Latent 0.001749 | Recon 0.009197
+Epoch 272 | Train 0.018976 | Val 0.023136 | Pred 0.012687 | Latent 0.001627 | Recon 0.008822
+Epoch 273 | Train 0.018141 | Val 0.023570 | Pred 0.012854 | Latent 0.001621 | Recon 0.009095
+Epoch 274 | Train 0.018079 | Val 0.023256 | Pred 0.012965 | Latent 0.001671 | Recon 0.008620
+Epoch 275 | Train 0.017933 | Val 0.028965 | Pred 0.016928 | Latent 0.001989 | Recon 0.010048
+Epoch 276 | Train 0.019515 | Val 0.025125 | Pred 0.013866 | Latent 0.001689 | Recon 0.009570
+Epoch 277 | Train 0.018178 | Val 0.027358 | Pred 0.015338 | Latent 0.001732 | Recon 0.010288
+Epoch 278 | Train 0.018663 | Val 0.024087 | Pred 0.013423 | Latent 0.001633 | Recon 0.009031
+Epoch 279 | Train 0.017969 | Val 0.026240 | Pred 0.014439 | Latent 0.001720 | Recon 0.010081
+Epoch 280 | Train 0.018972 | Val 0.024514 | Pred 0.013407 | Latent 0.001635 | Recon 0.009472
+Epoch 281 | Train 0.018132 | Val 0.026666 | Pred 0.015001 | Latent 0.001746 | Recon 0.009919
+Epoch 282 | Train 0.018704 | Val 0.026010 | Pred 0.015051 | Latent 0.001742 | Recon 0.009217
+Epoch 283 | Train 0.018964 | Val 0.022728 | Pred 0.012509 | Latent 0.001575 | Recon 0.008643
+Epoch 284 | Train 0.017863 | Val 0.023548 | Pred 0.013038 | Latent 0.001626 | Recon 0.008884
+Epoch 285 | Train 0.017742 | Val 0.024420 | Pred 0.013546 | Latent 0.001641 | Recon 0.009233
+Epoch 286 | Train 0.017682 | Val 0.024500 | Pred 0.013476 | Latent 0.001657 | Recon 0.009366
+Epoch 287 | Train 0.017761 | Val 0.023355 | Pred 0.013091 | Latent 0.001650 | Recon 0.008614
+Epoch 288 | Train 0.017385 | Val 0.025274 | Pred 0.014475 | Latent 0.001770 | Recon 0.009029
+Epoch 289 | Train 0.018233 | Val 0.022814 | Pred 0.012534 | Latent 0.001606 | Recon 0.008675
+Epoch 290 | Train 0.017957 | Val 0.026276 | Pred 0.015078 | Latent 0.001844 | Recon 0.009354
+Epoch 291 | Train 0.018493 | Val 0.023488 | Pred 0.013022 | Latent 0.001539 | Recon 0.008927
+Epoch 292 | Train 0.017601 | Val 0.025245 | Pred 0.013938 | Latent 0.001604 | Recon 0.009703
+Epoch 293 | Train 0.017622 | Val 0.023566 | Pred 0.013018 | Latent 0.001550 | Recon 0.008997
+Epoch 294 | Train 0.017566 | Val 0.025575 | Pred 0.014450 | Latent 0.001617 | Recon 0.009509
+Epoch 295 | Train 0.017941 | Val 0.023248 | Pred 0.012849 | Latent 0.001550 | Recon 0.008848
+Epoch 296 | Train 0.017576 | Val 0.022988 | Pred 0.012584 | Latent 0.001595 | Recon 0.008808
+Epoch 297 | Train 0.017624 | Val 0.025870 | Pred 0.014187 | Latent 0.001753 | Recon 0.009929
+Epoch 298 | Train 0.018588 | Val 0.024288 | Pred 0.013652 | Latent 0.001701 | Recon 0.008935
+Epoch 299 | Train 0.017648 | Val 0.023375 | Pred 0.012805 | Latent 0.001604 | Recon 0.008966
+Epoch 300 | Train 0.017254 | Val 0.023430 | Pred 0.012979 | Latent 0.001629 | Recon 0.008822
+Epoch 301 | Train 0.018105 | Val 0.023484 | Pred 0.013073 | Latent 0.001574 | Recon 0.008837
+Epoch 302 | Train 0.017172 | Val 0.023700 | Pred 0.013231 | Latent 0.001697 | Recon 0.008772
+Epoch 303 | Train 0.017273 | Val 0.022284 | Pred 0.012335 | Latent 0.001546 | Recon 0.008403
+Epoch 304 | Train 0.017285 | Val 0.024086 | Pred 0.013293 | Latent 0.001706 | Recon 0.009086
+Epoch 305 | Train 0.017968 | Val 0.026815 | Pred 0.015218 | Latent 0.001722 | Recon 0.009875
+Epoch 306 | Train 0.018077 | Val 0.023687 | Pred 0.013032 | Latent 0.001523 | Recon 0.009132
+Epoch 307 | Train 0.017180 | Val 0.022881 | Pred 0.012863 | Latent 0.001583 | Recon 0.008435
+Epoch 308 | Train 0.016918 | Val 0.024899 | Pred 0.013796 | Latent 0.001654 | Recon 0.009449
+Epoch 309 | Train 0.017220 | Val 0.021613 | Pred 0.011912 | Latent 0.001518 | Recon 0.008184
+Epoch 310 | Train 0.016362 | Val 0.021266 | Pred 0.011828 | Latent 0.001528 | Recon 0.007910
+Epoch 311 | Train 0.016505 | Val 0.023591 | Pred 0.013201 | Latent 0.001507 | Recon 0.008884
+Epoch 312 | Train 0.016800 | Val 0.022447 | Pred 0.012493 | Latent 0.001500 | Recon 0.008453
+Epoch 313 | Train 0.016768 | Val 0.022392 | Pred 0.012433 | Latent 0.001503 | Recon 0.008457
+Epoch 314 | Train 0.016953 | Val 0.023359 | Pred 0.013145 | Latent 0.001550 | Recon 0.008664
+Epoch 315 | Train 0.017259 | Val 0.021592 | Pred 0.012178 | Latent 0.001551 | Recon 0.007863
+Epoch 316 | Train 0.016248 | Val 0.022114 | Pred 0.012339 | Latent 0.001599 | Recon 0.008175
+Epoch 317 | Train 0.016313 | Val 0.022018 | Pred 0.012331 | Latent 0.001450 | Recon 0.008237
+Epoch 318 | Train 0.016337 | Val 0.021336 | Pred 0.011949 | Latent 0.001469 | Recon 0.007918
+Epoch 319 | Train 0.016544 | Val 0.024250 | Pred 0.013290 | Latent 0.001550 | Recon 0.009410
+Epoch 320 | Train 0.017146 | Val 0.027872 | Pred 0.015495 | Latent 0.001558 | Recon 0.010819
+Epoch 321 | Train 0.017878 | Val 0.030775 | Pred 0.018162 | Latent 0.001868 | Recon 0.010745
+Epoch 322 | Train 0.018042 | Val 0.022844 | Pred 0.012744 | Latent 0.001516 | Recon 0.008584
+Epoch 323 | Train 0.016669 | Val 0.021917 | Pred 0.012315 | Latent 0.001513 | Recon 0.008089
+Epoch 324 | Train 0.015954 | Val 0.022923 | Pred 0.012728 | Latent 0.001491 | Recon 0.008705
+Epoch 325 | Train 0.016071 | Val 0.021023 | Pred 0.011830 | Latent 0.001508 | Recon 0.007685
+Epoch 326 | Train 0.016235 | Val 0.023515 | Pred 0.013141 | Latent 0.001635 | Recon 0.008739
+Epoch 327 | Train 0.017226 | Val 0.021810 | Pred 0.011931 | Latent 0.001463 | Recon 0.008416
+Epoch 328 | Train 0.016653 | Val 0.023956 | Pred 0.013355 | Latent 0.001505 | Recon 0.009097
+Epoch 329 | Train 0.016104 | Val 0.021285 | Pred 0.011873 | Latent 0.001454 | Recon 0.007958
+Epoch 330 | Train 0.015985 | Val 0.021554 | Pred 0.012014 | Latent 0.001408 | Recon 0.008132
+Epoch 331 | Train 0.015737 | Val 0.022131 | Pred 0.012138 | Latent 0.001411 | Recon 0.008583
+Epoch 332 | Train 0.016063 | Val 0.020933 | Pred 0.011707 | Latent 0.001411 | Recon 0.007815
+Epoch 333 | Train 0.015764 | Val 0.021788 | Pred 0.012142 | Latent 0.001434 | Recon 0.008212
+Epoch 334 | Train 0.015712 | Val 0.020890 | Pred 0.011629 | Latent 0.001412 | Recon 0.007849
+Epoch 335 | Train 0.015324 | Val 0.021480 | Pred 0.012062 | Latent 0.001426 | Recon 0.007992
+Epoch 336 | Train 0.015846 | Val 0.021861 | Pred 0.012143 | Latent 0.001516 | Recon 0.008202
+Epoch 337 | Train 0.015568 | Val 0.021930 | Pred 0.012187 | Latent 0.001512 | Recon 0.008230
+Epoch 338 | Train 0.016091 | Val 0.022915 | Pred 0.012770 | Latent 0.001434 | Recon 0.008712
+Epoch 339 | Train 0.016368 | Val 0.021640 | Pred 0.012057 | Latent 0.001410 | Recon 0.008173
+Epoch 340 | Train 0.015637 | Val 0.024120 | Pred 0.013849 | Latent 0.001596 | Recon 0.008674
+Epoch 341 | Train 0.016126 | Val 0.022210 | Pred 0.012405 | Latent 0.001455 | Recon 0.008350
+Epoch 342 | Train 0.018651 | Val 0.027158 | Pred 0.015143 | Latent 0.001835 | Recon 0.010180
+Epoch 343 | Train 0.019434 | Val 0.023016 | Pred 0.012757 | Latent 0.001566 | Recon 0.008692
+Epoch 344 | Train 0.018310 | Val 0.026780 | Pred 0.015550 | Latent 0.001926 | Recon 0.009304
+Epoch 345 | Train 0.018808 | Val 0.023781 | Pred 0.013417 | Latent 0.001655 | Recon 0.008709
+Epoch 346 | Train 0.016439 | Val 0.020545 | Pred 0.011649 | Latent 0.001491 | Recon 0.007405
+Epoch 347 | Train 0.019775 | Val 0.021980 | Pred 0.012363 | Latent 0.001666 | Recon 0.007951
+Epoch 348 | Train 0.016422 | Val 0.020496 | Pred 0.011499 | Latent 0.001449 | Recon 0.007548
+Epoch 349 | Train 0.015511 | Val 0.024545 | Pred 0.014050 | Latent 0.001745 | Recon 0.008751
+Epoch 350 | Train 0.020435 | Val 0.022090 | Pred 0.012381 | Latent 0.001543 | Recon 0.008166
+Epoch 351 | Train 0.017694 | Val 0.033392 | Pred 0.020474 | Latent 0.002307 | Recon 0.010611
+Epoch 352 | Train 0.018366 | Val 0.021083 | Pred 0.012067 | Latent 0.001483 | Recon 0.007532
+Epoch 353 | Train 0.016161 | Val 0.020764 | Pred 0.011354 | Latent 0.001442 | Recon 0.007968
+Epoch 354 | Train 0.015809 | Val 0.020432 | Pred 0.011374 | Latent 0.001403 | Recon 0.007654
+Epoch 355 | Train 0.016432 | Val 0.024914 | Pred 0.013680 | Latent 0.001699 | Recon 0.009535
+Epoch 356 | Train 0.016953 | Val 0.020397 | Pred 0.011255 | Latent 0.001367 | Recon 0.007775
+Epoch 357 | Train 0.015112 | Val 0.021512 | Pred 0.011918 | Latent 0.001468 | Recon 0.008126
+Epoch 358 | Train 0.015956 | Val 0.020524 | Pred 0.011575 | Latent 0.001362 | Recon 0.007587
+Epoch 359 | Train 0.015187 | Val 0.019965 | Pred 0.010943 | Latent 0.001366 | Recon 0.007655
+Epoch 360 | Train 0.014705 | Val 0.022189 | Pred 0.012466 | Latent 0.001437 | Recon 0.008286
+Epoch 361 | Train 0.015273 | Val 0.020601 | Pred 0.011472 | Latent 0.001403 | Recon 0.007726
+Epoch 362 | Train 0.014544 | Val 0.023726 | Pred 0.013515 | Latent 0.001557 | Recon 0.008654
+Epoch 363 | Train 0.016080 | Val 0.020787 | Pred 0.011609 | Latent 0.001421 | Recon 0.007757
+Epoch 364 | Train 0.014756 | Val 0.019613 | Pred 0.011032 | Latent 0.001348 | Recon 0.007233
+Epoch 365 | Train 0.014492 | Val 0.020087 | Pred 0.011100 | Latent 0.001367 | Recon 0.007620
+Epoch 366 | Train 0.014583 | Val 0.019882 | Pred 0.011044 | Latent 0.001375 | Recon 0.007464
+Epoch 367 | Train 0.014653 | Val 0.022092 | Pred 0.012145 | Latent 0.001374 | Recon 0.008572
+Epoch 368 | Train 0.015068 | Val 0.020388 | Pred 0.011309 | Latent 0.001409 | Recon 0.007670
+Epoch 369 | Train 0.015108 | Val 0.021435 | Pred 0.012075 | Latent 0.001517 | Recon 0.007843
+Epoch 370 | Train 0.015214 | Val 0.024401 | Pred 0.014184 | Latent 0.001471 | Recon 0.008746
+Epoch 371 | Train 0.015688 | Val 0.027143 | Pred 0.015999 | Latent 0.001646 | Recon 0.009497
+Epoch 372 | Train 0.016463 | Val 0.020335 | Pred 0.011422 | Latent 0.001386 | Recon 0.007526
+Epoch 373 | Train 0.014561 | Val 0.020000 | Pred 0.011194 | Latent 0.001341 | Recon 0.007466
+Epoch 374 | Train 0.014787 | Val 0.020233 | Pred 0.011539 | Latent 0.001352 | Recon 0.007341
+Epoch 375 | Train 0.014433 | Val 0.019796 | Pred 0.010868 | Latent 0.001314 | Recon 0.007613
+Epoch 376 | Train 0.015128 | Val 0.022926 | Pred 0.013191 | Latent 0.001504 | Recon 0.008231
+Epoch 377 | Train 0.017328 | Val 0.021543 | Pred 0.011988 | Latent 0.001416 | Recon 0.008140
+Epoch 378 | Train 0.015093 | Val 0.022389 | Pred 0.012732 | Latent 0.001421 | Recon 0.008236
+Epoch 379 | Train 0.014805 | Val 0.019264 | Pred 0.010733 | Latent 0.001309 | Recon 0.007221
+Epoch 380 | Train 0.014041 | Val 0.019670 | Pred 0.010901 | Latent 0.001356 | Recon 0.007413
+Epoch 381 | Train 0.014273 | Val 0.019795 | Pred 0.010981 | Latent 0.001312 | Recon 0.007502
+Epoch 382 | Train 0.014011 | Val 0.018997 | Pred 0.010705 | Latent 0.001274 | Recon 0.007018
+Epoch 383 | Train 0.014118 | Val 0.020064 | Pred 0.011224 | Latent 0.001324 | Recon 0.007516
+Epoch 384 | Train 0.015128 | Val 0.020545 | Pred 0.011545 | Latent 0.001388 | Recon 0.007612
+Epoch 385 | Train 0.015250 | Val 0.020687 | Pred 0.011274 | Latent 0.001362 | Recon 0.008050
+Epoch 386 | Train 0.014608 | Val 0.021301 | Pred 0.012028 | Latent 0.001380 | Recon 0.007893
+Epoch 387 | Train 0.014435 | Val 0.020713 | Pred 0.011557 | Latent 0.001343 | Recon 0.007813
+Epoch 388 | Train 0.014446 | Val 0.019320 | Pred 0.010910 | Latent 0.001297 | Recon 0.007113
+Epoch 389 | Train 0.014189 | Val 0.021230 | Pred 0.011788 | Latent 0.001344 | Recon 0.008099
+Epoch 390 | Train 0.014096 | Val 0.020156 | Pred 0.011207 | Latent 0.001275 | Recon 0.007675
+Epoch 391 | Train 0.014056 | Val 0.019691 | Pred 0.010813 | Latent 0.001288 | Recon 0.007590
+Epoch 392 | Train 0.014222 | Val 0.019127 | Pred 0.010802 | Latent 0.001333 | Recon 0.006992
+Epoch 393 | Train 0.013966 | Val 0.021335 | Pred 0.012037 | Latent 0.001327 | Recon 0.007971
+Epoch 394 | Train 0.014699 | Val 0.020124 | Pred 0.011391 | Latent 0.001337 | Recon 0.007396
+Epoch 395 | Train 0.014181 | Val 0.019673 | Pred 0.010961 | Latent 0.001296 | Recon 0.007416
+Epoch 396 | Train 0.014078 | Val 0.021501 | Pred 0.011830 | Latent 0.001399 | Recon 0.008272
+Epoch 397 | Train 0.014242 | Val 0.019462 | Pred 0.010998 | Latent 0.001293 | Recon 0.007170
+Epoch 398 | Train 0.014419 | Val 0.019418 | Pred 0.010739 | Latent 0.001260 | Recon 0.007419
+Epoch 399 | Train 0.014332 | Val 0.020529 | Pred 0.011578 | Latent 0.001451 | Recon 0.007500
+Epoch 400 | Train 0.014880 | Val 0.020099 | Pred 0.011261 | Latent 0.001300 | Recon 0.007538
+Epoch 401 | Train 0.014119 | Val 0.020354 | Pred 0.011634 | Latent 0.001335 | Recon 0.007384
+Epoch 402 | Train 0.014042 | Val 0.019442 | Pred 0.010833 | Latent 0.001280 | Recon 0.007328
+Epoch 403 | Train 0.013801 | Val 0.019058 | Pred 0.010351 | Latent 0.001292 | Recon 0.007415
+Epoch 404 | Train 0.013823 | Val 0.020486 | Pred 0.011521 | Latent 0.001294 | Recon 0.007672
+Epoch 405 | Train 0.014066 | Val 0.019874 | Pred 0.011214 | Latent 0.001316 | Recon 0.007343
+Epoch 406 | Train 0.013801 | Val 0.019889 | Pred 0.011041 | Latent 0.001305 | Recon 0.007544
+Epoch 407 | Train 0.013505 | Val 0.019775 | Pred 0.011007 | Latent 0.001321 | Recon 0.007447
+Epoch 408 | Train 0.014534 | Val 0.019420 | Pred 0.010726 | Latent 0.001285 | Recon 0.007409
+Epoch 409 | Train 0.013803 | Val 0.020387 | Pred 0.011461 | Latent 0.001318 | Recon 0.007609
+Epoch 410 | Train 0.014137 | Val 0.018982 | Pred 0.010793 | Latent 0.001264 | Recon 0.006925
+Epoch 411 | Train 0.013626 | Val 0.018735 | Pred 0.010553 | Latent 0.001226 | Recon 0.006956
+Epoch 412 | Train 0.013663 | Val 0.018091 | Pred 0.010123 | Latent 0.001256 | Recon 0.006712
+Epoch 413 | Train 0.013506 | Val 0.020615 | Pred 0.011544 | Latent 0.001324 | Recon 0.007747
+Epoch 414 | Train 0.013946 | Val 0.018402 | Pred 0.010232 | Latent 0.001269 | Recon 0.006901
+Epoch 415 | Train 0.013427 | Val 0.018871 | Pred 0.010570 | Latent 0.001221 | Recon 0.007080
+Epoch 416 | Train 0.013401 | Val 0.019494 | Pred 0.010921 | Latent 0.001252 | Recon 0.007321
+Epoch 417 | Train 0.013704 | Val 0.019205 | Pred 0.010782 | Latent 0.001263 | Recon 0.007160
+Epoch 418 | Train 0.013353 | Val 0.019848 | Pred 0.010934 | Latent 0.001298 | Recon 0.007617
+Epoch 419 | Train 0.013918 | Val 0.019548 | Pred 0.011091 | Latent 0.001266 | Recon 0.007191
+Epoch 420 | Train 0.013392 | Val 0.022010 | Pred 0.012056 | Latent 0.001299 | Recon 0.008655
+Epoch 421 | Train 0.014022 | Val 0.018111 | Pred 0.010194 | Latent 0.001225 | Recon 0.006692
+Epoch 422 | Train 0.013473 | Val 0.019334 | Pred 0.010868 | Latent 0.001298 | Recon 0.007169
+Epoch 423 | Train 0.014075 | Val 0.019074 | Pred 0.010731 | Latent 0.001269 | Recon 0.007075
+Epoch 424 | Train 0.013314 | Val 0.018913 | Pred 0.010307 | Latent 0.001262 | Recon 0.007344
+Epoch 425 | Train 0.013466 | Val 0.018739 | Pred 0.010584 | Latent 0.001289 | Recon 0.006865
+Epoch 426 | Train 0.013639 | Val 0.019629 | Pred 0.011266 | Latent 0.001311 | Recon 0.007052
+Epoch 427 | Train 0.013351 | Val 0.018025 | Pred 0.010318 | Latent 0.001228 | Recon 0.006479
+Epoch 428 | Train 0.013118 | Val 0.021306 | Pred 0.012223 | Latent 0.001313 | Recon 0.007770
+Epoch 429 | Train 0.014447 | Val 0.023793 | Pred 0.013389 | Latent 0.001358 | Recon 0.009045
+Epoch 430 | Train 0.014710 | Val 0.021880 | Pred 0.012235 | Latent 0.001358 | Recon 0.008287
+Epoch 431 | Train 0.014048 | Val 0.019542 | Pred 0.011112 | Latent 0.001267 | Recon 0.007163
+Epoch 432 | Train 0.013246 | Val 0.018357 | Pred 0.010452 | Latent 0.001240 | Recon 0.006665
+Epoch 433 | Train 0.013285 | Val 0.019226 | Pred 0.010682 | Latent 0.001272 | Recon 0.007273
+Epoch 434 | Train 0.012957 | Val 0.018294 | Pred 0.010341 | Latent 0.001218 | Recon 0.006735
+Epoch 435 | Train 0.012692 | Val 0.018286 | Pred 0.010411 | Latent 0.001255 | Recon 0.006620
+Epoch 436 | Train 0.012925 | Val 0.017686 | Pred 0.009958 | Latent 0.001202 | Recon 0.006526
+Epoch 437 | Train 0.012918 | Val 0.020536 | Pred 0.011436 | Latent 0.001299 | Recon 0.007800
+Epoch 438 | Train 0.013793 | Val 0.019146 | Pred 0.010942 | Latent 0.001280 | Recon 0.006924
+Epoch 439 | Train 0.013221 | Val 0.018846 | Pred 0.010538 | Latent 0.001250 | Recon 0.007059
+Epoch 440 | Train 0.012991 | Val 0.019853 | Pred 0.010994 | Latent 0.001270 | Recon 0.007589
+Epoch 441 | Train 0.013060 | Val 0.019161 | Pred 0.010796 | Latent 0.001275 | Recon 0.007091
+Epoch 442 | Train 0.013013 | Val 0.017927 | Pred 0.009890 | Latent 0.001178 | Recon 0.006858
+Epoch 443 | Train 0.012919 | Val 0.019381 | Pred 0.010889 | Latent 0.001254 | Recon 0.007238
+Epoch 444 | Train 0.013322 | Val 0.019862 | Pred 0.010985 | Latent 0.001259 | Recon 0.007618
+Epoch 445 | Train 0.012959 | Val 0.018574 | Pred 0.010590 | Latent 0.001221 | Recon 0.006763
+Epoch 446 | Train 0.013198 | Val 0.018702 | Pred 0.010314 | Latent 0.001255 | Recon 0.007133
+Epoch 447 | Train 0.013320 | Val 0.021782 | Pred 0.012378 | Latent 0.001320 | Recon 0.008084
+Epoch 448 | Train 0.013707 | Val 0.020818 | Pred 0.012059 | Latent 0.001283 | Recon 0.007477
+Epoch 449 | Train 0.012995 | Val 0.017743 | Pred 0.009824 | Latent 0.001182 | Recon 0.006737
+Epoch 450 | Train 0.012727 | Val 0.018345 | Pred 0.010308 | Latent 0.001237 | Recon 0.006799
+Epoch 451 | Train 0.012716 | Val 0.018888 | Pred 0.010687 | Latent 0.001246 | Recon 0.006955
+Epoch 452 | Train 0.012438 | Val 0.018750 | Pred 0.010510 | Latent 0.001244 | Recon 0.006997
+Epoch 453 | Train 0.013334 | Val 0.019717 | Pred 0.011356 | Latent 0.001269 | Recon 0.007092
+Epoch 454 | Train 0.013150 | Val 0.017564 | Pred 0.009931 | Latent 0.001210 | Recon 0.006423
+Epoch 455 | Train 0.012224 | Val 0.019560 | Pred 0.010775 | Latent 0.001233 | Recon 0.007553
+Epoch 456 | Train 0.012745 | Val 0.017637 | Pred 0.010000 | Latent 0.001179 | Recon 0.006457
+Epoch 457 | Train 0.012415 | Val 0.018358 | Pred 0.010405 | Latent 0.001196 | Recon 0.006758
+Epoch 458 | Train 0.012669 | Val 0.017886 | Pred 0.010004 | Latent 0.001176 | Recon 0.006705
+Epoch 459 | Train 0.012645 | Val 0.019297 | Pred 0.011150 | Latent 0.001254 | Recon 0.006893
+Epoch 460 | Train 0.013254 | Val 0.018464 | Pred 0.010417 | Latent 0.001252 | Recon 0.006795
+Epoch 461 | Train 0.012630 | Val 0.017351 | Pred 0.009820 | Latent 0.001170 | Recon 0.006360
+Epoch 462 | Train 0.012567 | Val 0.016883 | Pred 0.009386 | Latent 0.001152 | Recon 0.006345
+Epoch 463 | Train 0.012604 | Val 0.020181 | Pred 0.011314 | Latent 0.001241 | Recon 0.007626
+Epoch 464 | Train 0.012929 | Val 0.019397 | Pred 0.010702 | Latent 0.001224 | Recon 0.007471
+Epoch 465 | Train 0.012672 | Val 0.017716 | Pred 0.010044 | Latent 0.001193 | Recon 0.006479
+Epoch 466 | Train 0.012456 | Val 0.018767 | Pred 0.010536 | Latent 0.001259 | Recon 0.006973
+Epoch 467 | Train 0.014025 | Val 0.018675 | Pred 0.010649 | Latent 0.001232 | Recon 0.006794
+Epoch 468 | Train 0.013472 | Val 0.019501 | Pred 0.010888 | Latent 0.001248 | Recon 0.007365
+Epoch 469 | Train 0.013990 | Val 0.025558 | Pred 0.014979 | Latent 0.001446 | Recon 0.009133
+Epoch 470 | Train 0.014717 | Val 0.018901 | Pred 0.010855 | Latent 0.001265 | Recon 0.006782
+Epoch 471 | Train 0.016367 | Val 0.019210 | Pred 0.010728 | Latent 0.001270 | Recon 0.007212
+Epoch 472 | Train 0.013131 | Val 0.018318 | Pred 0.010463 | Latent 0.001259 | Recon 0.006595
+Epoch 473 | Train 0.012220 | Val 0.017995 | Pred 0.010331 | Latent 0.001165 | Recon 0.006499
+Epoch 474 | Train 0.012371 | Val 0.018418 | Pred 0.010401 | Latent 0.001144 | Recon 0.006873
+Epoch 475 | Train 0.012158 | Val 0.019810 | Pred 0.011456 | Latent 0.001261 | Recon 0.007093
+Epoch 476 | Train 0.013231 | Val 0.017122 | Pred 0.009578 | Latent 0.001165 | Recon 0.006379
+Epoch 477 | Train 0.012286 | Val 0.018495 | Pred 0.010593 | Latent 0.001208 | Recon 0.006694
+Epoch 478 | Train 0.012517 | Val 0.018116 | Pred 0.010145 | Latent 0.001190 | Recon 0.006782
+Epoch 479 | Train 0.012246 | Val 0.018739 | Pred 0.010721 | Latent 0.001214 | Recon 0.006804
+Epoch 480 | Train 0.012672 | Val 0.018514 | Pred 0.010251 | Latent 0.001209 | Recon 0.007054
+Epoch 481 | Train 0.012405 | Val 0.018501 | Pred 0.010555 | Latent 0.001185 | Recon 0.006761
+Epoch 482 | Train 0.012048 | Val 0.016792 | Pred 0.009489 | Latent 0.001133 | Recon 0.006170
+Epoch 483 | Train 0.011704 | Val 0.016785 | Pred 0.009452 | Latent 0.001160 | Recon 0.006173
+Epoch 484 | Train 0.012003 | Val 0.017440 | Pred 0.009796 | Latent 0.001134 | Recon 0.006511
+Epoch 485 | Train 0.012104 | Val 0.023554 | Pred 0.014129 | Latent 0.001483 | Recon 0.007942
+Epoch 486 | Train 0.013669 | Val 0.018104 | Pred 0.010366 | Latent 0.001170 | Recon 0.006568
+Epoch 487 | Train 0.011911 | Val 0.018526 | Pred 0.010592 | Latent 0.001240 | Recon 0.006695
+Epoch 488 | Train 0.012185 | Val 0.019269 | Pred 0.011031 | Latent 0.001151 | Recon 0.007087
+Epoch 489 | Train 0.012631 | Val 0.019583 | Pred 0.011189 | Latent 0.001221 | Recon 0.007173
+Epoch 490 | Train 0.013120 | Val 0.017572 | Pred 0.010014 | Latent 0.001209 | Recon 0.006349
+Epoch 491 | Train 0.011519 | Val 0.018401 | Pred 0.010002 | Latent 0.001144 | Recon 0.007255
+Epoch 492 | Train 0.012041 | Val 0.017625 | Pred 0.009914 | Latent 0.001155 | Recon 0.006556
+Epoch 493 | Train 0.011763 | Val 0.017248 | Pred 0.009857 | Latent 0.001147 | Recon 0.006244
+Epoch 494 | Train 0.011527 | Val 0.019722 | Pred 0.011072 | Latent 0.001166 | Recon 0.007483
+Epoch 495 | Train 0.012709 | Val 0.017253 | Pred 0.009724 | Latent 0.001128 | Recon 0.006402
+Epoch 496 | Train 0.011806 | Val 0.019029 | Pred 0.010946 | Latent 0.001205 | Recon 0.006878
+Epoch 497 | Train 0.012758 | Val 0.017997 | Pred 0.010307 | Latent 0.001175 | Recon 0.006515
+Epoch 498 | Train 0.012108 | Val 0.016942 | Pred 0.009723 | Latent 0.001156 | Recon 0.006062
+Epoch 499 | Train 0.011635 | Val 0.017240 | Pred 0.009682 | Latent 0.001137 | Recon 0.006421
+wandb: updating run metadata
+wandb: uploading models/latent_gru_world_model.pt; uploading output.log; uploading wandb-summary.json; uploading config.yaml
+wandb: uploading models/latent_gru_world_model.pt
+wandb: uploading history steps 484-499, summary, console lines 488-506
+wandb: 
+wandb: Run history:
+wandb:               epoch ▁▁▁▁▁▂▂▂▃▃▃▃▃▄▄▄▄▄▄▄▅▅▅▅▅▆▆▆▆▆▆▆▆▆▇▇▇███
+wandb:         latent_loss █▆▅▅▃▃▃▃▂▃▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:     prediction_loss █▇▄▄▂▂▃▂▃▃▂▃▃▃▂▂▂▂▂▂▂▂▁▂▂▂▁▂▁▁▁▁▁▂▁▁▁▁▁▁
+wandb: reconstruction_loss █▆▅▅▄▂▂▂▂▂▂▂▂▂▂▂▂▁▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:          train_loss █▄▃▂▂▂▂▂▂▂▂▂▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:            val_loss █▅▄▄▃▃▃▃▃▃▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▁▁▁▂▁▁▁▁▁▁▁▁▁▁▁
+wandb: 
+wandb: Run summary:
+wandb:               epoch 500
+wandb:         latent_loss 0.00116
+wandb:     prediction_loss 0.01031
+wandb: reconstruction_loss 0.00636
+wandb:          train_loss 0.01229
+wandb:            val_loss 0.01783
+wandb: 
+wandb: 🚀 View run latent-gru-train-hpc-a100-10825452 at: https://wandb.ai/IML-Research/latent-gru-world-model/runs/ywjya7u4
+wandb: ⭐️ View project at: https://wandb.ai/IML-Research/latent-gru-world-model
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 1 other file(s)
+wandb: Find logs at: ./wandb/run-20260714_024246-ywjya7u4/logs
+Epoch 500 | Train 0.012292 | Val 0.017829 | Pred 0.010312 | Latent 0.001158 | Recon 0.006358
+
+Best validation loss: 0.01678493003482404
+Saved model: models/latent_gru_world_model.pt
+Rollout...
+wandb: Currently logged in as: 92danyalsultan (IML-Research) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: setting up run bjnnoj63
+wandb: Tracking run with wandb version 0.23.0
+wandb: Run data is saved locally in /mnt/parscratch/users/aca22mds/projects/latent-gru-world-model/Latent-GRU-World-Model/wandb/run-20260714_024747-bjnnoj63
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run latent-gru-rollout-10825452
+wandb: ⭐️ View project at https://wandb.ai/IML-Research/latent-gru-world-model
+wandb: 🚀 View run at https://wandb.ai/IML-Research/latent-gru-world-model/runs/bjnnoj63
+/users/aca22mds/.conda/envs/latentgru/lib/python3.10/site-packages/torch/_utils.py:776: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+wandb: updating run metadata
+wandb: uploading config.yaml
+wandb: uploading history steps 0-1, summary, console lines 2-5
+wandb: 
+wandb: Run history:
+wandb: divergence_timestep ▁
+wandb:    eef_rollout_rmse ▁
+wandb:        rollout_rmse ▁
+wandb: 
+wandb: Run summary:
+wandb: divergence_timestep 20
+wandb:    eef_rollout_rmse 0.0792
+wandb:        rollout_rmse 0.36885
+wandb: 
+wandb: 🚀 View run latent-gru-rollout-10825452 at: https://wandb.ai/IML-Research/latent-gru-world-model/runs/bjnnoj63
+wandb: ⭐️ View project at: https://wandb.ai/IML-Research/latent-gru-world-model
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20260714_024747-bjnnoj63/logs
+Using device: cuda
+State shape: (1000, 77)
+Full rollout RMSE = 0.368852
+EEF rollout RMSE = 0.079197
+Divergence timestep: 20
+Evaluation...
+wandb: Currently logged in as: 92danyalsultan (IML-Research) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: setting up run ki16l1bf
+wandb: Tracking run with wandb version 0.23.0
+wandb: Run data is saved locally in /mnt/parscratch/users/aca22mds/projects/latent-gru-world-model/Latent-GRU-World-Model/wandb/run-20260714_024754-ki16l1bf
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run latent-gru-horizon-eval-10825452
+wandb: ⭐️ View project at https://wandb.ai/IML-Research/latent-gru-world-model
+wandb: 🚀 View run at https://wandb.ai/IML-Research/latent-gru-world-model/runs/ki16l1bf
+/users/aca22mds/.conda/envs/latentgru/lib/python3.10/site-packages/torch/_utils.py:776: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+wandb: uploading artifact run-ki16l1bf-horizon_results; updating run metadata
+wandb: uploading artifact run-ki16l1bf-horizon_results; uploading config.yaml
+wandb: 
+wandb: Run history:
+wandb: horizon ▁▁▂▂▄█
+wandb:    rmse ▁▂▃▄▆█
+wandb: 
+wandb: Run summary:
+wandb: horizon 100
+wandb:    rmse 0.17873
+wandb: 
+wandb: 🚀 View run latent-gru-horizon-eval-10825452 at: https://wandb.ai/IML-Research/latent-gru-world-model/runs/ki16l1bf
+wandb: ⭐️ View project at: https://wandb.ai/IML-Research/latent-gru-world-model
+wandb: Synced 5 W&B file(s), 1 media file(s), 2 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20260714_024754-ki16l1bf/logs
+Using device: cuda
+State shape: (1000, 77)
+  1-step RMSE = 0.024706
+  5-step RMSE = 0.044471
+ 10-step RMSE = 0.059174
+ 20-step RMSE = 0.088231
+ 50-step RMSE = 0.139614
+100-step RMSE = 0.178727
+Finished

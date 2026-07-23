@@ -10,6 +10,12 @@ import wandb
 # Configuration
 import yaml
 
+device = torch.device(
+    "cuda" if torch.cuda.is_available() else "cpu"
+)
+
+print("Using device:", device)
+
 with open("configs/train_config.yaml", "r") as f:
     config = yaml.safe_load(f)
 
@@ -23,7 +29,7 @@ EPISODE_DIR = "dataset/episode_001"
 
 wandb.init(
     project="latent-gru-world-model",
-    name="latent-gru-horizon-evaluation",
+    name=f"latent-gru-horizon-eval-{os.environ.get('SLURM_JOB_ID', 'local')}",
     config=config
 )
 
@@ -76,12 +82,12 @@ class LatentGRUWorldModel(nn.Module):
         return next_state_pred
 
 # Load model and normalization statistics
-model = LatentGRUWorldModel()
+model = LatentGRUWorldModel().to(device)
 
 model.load_state_dict(
     torch.load(
         "models/latent_gru_world_model.pt",
-        map_location="cpu",
+        map_location=device,
         weights_only=True
     )
 )
@@ -158,7 +164,10 @@ wandb.config.update({
 # Predict one normalized next state from a sequence
 def predict_next_state(sequence_raw):
     sequence_norm = (sequence_raw - X_mean) / X_std
-    sequence_tensor = torch.tensor(sequence_norm, dtype=torch.float32).unsqueeze(0)
+    sequence_tensor = torch.tensor(
+    sequence_norm,
+    dtype=torch.float32
+).unsqueeze(0).to(device)
 
     with torch.no_grad():
         next_state_norm = model(sequence_tensor)

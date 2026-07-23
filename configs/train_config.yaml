@@ -2,7 +2,7 @@ experiment:
   name: latentgru_200epochs
 
 training:
-  epochs: 200
+  epochs: 2000
   batch_size: 128
   learning_rate: 0.001
 

@@ -12,6 +12,12 @@ from torch.utils.data import (
 
 import yaml
 
+device = torch.device(
+    "cuda" if torch.cuda.is_available() else "cpu"
+)
+
+print("Using device:", device)
+
 # Configuration
 
 with open("configs/train_config.yaml", "r") as f:
@@ -19,7 +25,7 @@ with open("configs/train_config.yaml", "r") as f:
 
 wandb.init(
     project="latent-gru-world-model",
-    name="latent-gru-baseline",
+    name=f"latent-gru-train-hpc-a100-{os.environ.get('SLURM_JOB_ID', 'local')}",
     config=config
 )
 
@@ -82,13 +88,17 @@ train_set, val_set, test_set = random_split(dataset,[train_size, val_size, test_
 train_loader = DataLoader(
     train_set,
     batch_size=BATCH_SIZE,
-    shuffle=True
+    shuffle=True,
+    num_workers=4,
+    pin_memory=True
 )
 
 val_loader = DataLoader(
     val_set,
     batch_size=BATCH_SIZE,
-    shuffle=False
+    shuffle=False,
+    num_workers=4,
+    pin_memory=True
 )
 
 # Model
@@ -156,15 +166,12 @@ class LatentGRUWorldModel(nn.Module):
             z_last_true,
             last_state_recon
         )
-
-# Training setup
-device = torch.device(
-    "cuda"
-    if torch.cuda.is_available()
-    else "cpu"
-)
+    
 
 print("Device:", device)
+
+if torch.cuda.is_available():
+    print("GPU:", torch.cuda.get_device_name(0))
 
 model = LatentGRUWorldModel().to(device)
 
@@ -189,8 +196,8 @@ for epoch in range(EPOCHS):
     train_reconstruction_loss = 0.0
 
     for x_batch, y_batch in train_loader:
-        x_batch = x_batch.to(device)
-        y_batch = y_batch.to(device)
+        x_batch = x_batch.to(device, non_blocking=True)
+        y_batch = y_batch.to(device, non_blocking=True)
 
         (next_state_pred, z_next_pred, z_last_true, last_state_recon) = model(x_batch)
 
@@ -238,8 +245,8 @@ for epoch in range(EPOCHS):
 
     with torch.no_grad():
         for x_batch, y_batch in val_loader:
-            x_batch = x_batch.to(device)
-            y_batch = y_batch.to(device)
+            x_batch = x_batch.to(device, non_blocking=True)
+            y_batch = y_batch.to(device, non_blocking=True)
 
             (next_state_pred, z_next_pred, z_last_true, last_state_recon) = model(x_batch)
 

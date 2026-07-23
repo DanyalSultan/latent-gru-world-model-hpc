@@ -7,10 +7,11 @@
 #SBATCH --time=01:00:00
 #SBATCH --output=logs/eval_%j.out
 
-module load Anaconda3
-module load CUDA/11.8.0
+set -e
 
-conda activate latentgru
+module load Anaconda3
+
+source activate latentgru
 
 cd /mnt/parscratch/users/aca22mds/projects/latent-gru-world-model/Latent-GRU-World-Model
 
