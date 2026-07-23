@@ -85,24 +85,46 @@ Latent-GRU-World-Model/
 
 # Getting Started
 
-There are two separate workflows depending on where you want to run the project.
+There are two supported ways to run this project.
 
-Choose **one**:
+Choose the workflow that matches your environment.
 
 ---
 
-# Local Setup
+# Option 1 — Local Execution
 
-Use this workflow if you are running on your own machine.
+Use this if you are running on your own machine with a local GPU or CPU.
 
 Recommended for:
 
 - Development
 - Debugging
 - Small experiments
-- Testing model changes
+- Model testing
+
+Follow:
+
+[Local Setup](#local-setup)
 
 ---
+
+# Option 2 — HPC Execution
+
+Use this if you are running on a cluster environment with SLURM.
+
+Recommended for:
+
+- Large-scale experiments
+- GPU training
+- Long training runs
+- Reproducible research experiments
+
+Follow:
+
+[HPC Setup](#hpc-setup-slurm)
+---
+
+# Local Setup
 
 ## 1. Create Environment
 
@@ -202,15 +224,6 @@ python scripts/evaluate_latent_gru_horizons.py
 
 # HPC Setup (SLURM)
 
-Use this workflow if running on a cluster environment with SLURM.
-
-Recommended for:
-
-- Large-scale experiments
-- GPU training
-- Long training runs
-- Reproducible research experiments
-
 This workflow was tested on:
 
 ```
@@ -269,7 +282,7 @@ Training jobs will automatically upload:
 
 ---
 
-## 3. Run Full Pipeline
+## 3. Submit Full Pipeline
 
 The recommended HPC workflow is:
 
@@ -291,17 +304,17 @@ Long-Horizon Evaluation
 
 ---
 
-## 4. Run Individual HPC Jobs
+## 4. Individual HPC Jobs
 
 Individual stages can also be submitted separately.
 
-### Dataset Preparation + Training
+### Dataset / Training
 
 ```bash
 sbatch slurm/train_gpu.sh
 ```
 
-### Rollout Evaluation
+### Rollout
 
 ```bash
 sbatch slurm/rollout_gpu.sh
