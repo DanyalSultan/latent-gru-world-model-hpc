@@ -248,10 +248,16 @@ Python:
 
 ## 1. Load HPC Environment
 
-Example:
+Load Anaconda:
 
 ```bash
 module load Anaconda3
+```
+
+Create the conda environment:
+
+```bash
+conda create -n latentgru python=3.10
 conda activate latentgru
 ```
 
@@ -265,7 +271,7 @@ pip install -r requirements.txt
 
 ## 2. Configure W&B
 
-W&B works the same way on HPC.
+This project uses **Weights & Biases (W&B)** for experiment tracking on HPC.
 
 Login:
 
