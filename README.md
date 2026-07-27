@@ -148,12 +148,6 @@ pip install -r requirements.txt
 
 This project uses **Weights & Biases (W&B)** for experiment tracking.
 
-Install:
-
-```bash
-pip install wandb
-```
-
 Login:
 
 ```bash
